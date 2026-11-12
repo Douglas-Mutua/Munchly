@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/adminNav"
+        android:fillViewport="true"
+        android:padding="20dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_light"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back"
+                    app:tint="#111111"
+                    android:contentDescription="@string/back" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/add_update_product_title"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333" />
+
+                <View android:layout_width="36dp" android:layout_height="36dp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etProductName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="@string/hint_product_name"
+                android:autofillHints="name"
+                android:inputType="text"
+                android:background="@drawable/bg_rounded_light"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etProductCategory"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="@string/hint_product_category"
+                android:autofillHints="postalAddress"
+                android:inputType="text"
+                android:background="@drawable/bg_rounded_light"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="@string/hint_product_price"
+                android:autofillHints="postalAddress"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_rounded_light"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etStockQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="@string/hint_stock_quantity"
+                android:autofillHints="phone"
+                android:inputType="number"
+                android:background="@drawable/bg_rounded_light"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Image URL or Gallery Picker Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etImageUrl"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:hint="Image URL or Pick Gallery ->"
+                    android:autofillHints="postalAddress"
+                    android:inputType="textUri"
+                    android:background="@drawable/bg_rounded_light"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnPickImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="52dp"
+                    android:text="Gallery"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6B00"
+                    app:cornerRadius="26dp" />
+            </LinearLayout>
+
+            <!-- Image Preview -->
+            <ImageView
+                android:id="@+id/ivSelectedImagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:background="#F2F2F2"
+                android:visibility="gone"
+                android:contentDescription="Selected Image Preview"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="@string/hint_product_description"
+                android:autofillHints="postalAddress"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:background="@drawable/bg_rounded_light"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/btnSaveProduct"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/btn_save_product"
+                android:backgroundTint="#FF6B00"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="26dp" />
+
+            <!-- Divider & Existing Products Section -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage Existing Products"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:id="@+id/adminProductListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/adminNav"
+        layout="@layout/layout_admin_nav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>

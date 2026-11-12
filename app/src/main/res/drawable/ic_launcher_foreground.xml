@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Elegant Cursive Lowercase 'm' -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,70 C32,64 33,54 37,48 C41,42 46,40 51,44 C54,47 55,52 56,57 C57,50 62,42 69,42 C75,42 78,47 77,54 C81,48 87,44 92,48 C96,52 96,60 94,70 C92,76 88,79 84,77 C80,75 82,67 85,61 C86,56 84,52 79,52 C74,52 71,59 69,67 C67,74 63,78 58,76 C53,74 55,65 58,60 C59,55 58,50 53,50 C48,50 43,58 41,68 C39,76 36,77 34,70 Z" />
+
+    <!-- Sparkle 1 (Large Top Right) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M76,28 C76,34 80,38 86,38 C80,38 76,42 76,48 C76,42 72,38 66,38 C72,38 76,34 76,28 Z" />
+
+    <!-- Sparkle 2 (Medium Right) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M93,36 C93,40 96,42 99,42 C96,42 93,44 93,48 C93,44 90,42 87,42 C90,42 93,40 93,36 Z" />
+
+    <!-- Sparkle 3 (Small Bottom Right of Star) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M84,46 C84,49 86,51 89,51 C86,51 84,53 84,56 C84,53 82,51 79,51 C82,51 84,49 84,46 Z" />
+</vector>

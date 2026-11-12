@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Munchly</string>
+    <string name="search">Search</string>
+    <string name="location">Location</string>
+    <string name="location_name">Nairobi, Kenya</string>
+    <string name="dropdown">Dropdown</string>
+    <string name="cart">Cart</string>
+    <string name="free_delivery_spaghetti">Free Delivery For\nSpaghetti</string>
+    <string name="delivery_limit">UP to 3 times per day</string>
+    <string name="order_now">Order Now</string>
+    <string name="spaghetti_banner">Spaghetti Banner</string>
+    <string name="category_burger">Burger</string>
+    <string name="category_chicken">Chicken</string>
+    <string name="category_fries">Fries</string>
+    <string name="category_drink">Drink</string>
+    <string name="all_menu_items">All Menu Items</string>
+    <string name="emoji_burger">🍔</string>
+    <string name="emoji_chicken">🍗</string>
+    <string name="emoji_fries">🍟</string>
+    <string name="emoji_drink">🥤</string>
+    <!-- Product Management Strings -->
+    <string name="back">Back</string>
+    <string name="add_update_product_title">Add / Update Product</string>
+    <string name="hint_product_name">Product Name (e.g. Crispy Burger)</string>
+    <string name="hint_product_category">Category (Burgers, Chicken, Sides, Drinks)</string>
+    <string name="hint_product_price">Price in KES (e.g. 450.00)</string>
+    <string name="hint_stock_quantity">Stock Quantity (e.g. 25)</string>
+    <string name="hint_image_url">Unsplash Image Link (https://images.unsplash.com/...)</string>
+    <string name="hint_product_description">Product Description</string>
+    <string name="btn_save_product">Save Product to Catalog &amp; Firestore</string>
+    <!-- Bottom Navigation Content Descriptions -->
+    <string name="nav_home">Home</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_profile">Profile</string>
+    <!-- Order History Strings -->
+    <string name="my_munchly_orders_title">My Munchly Orders</string>
+    <!-- Admin Dashboard Strings -->
+    <string name="admin_dashboard_title">Admin Dashboard 🛡️</string>
+    <string name="exit_admin_portal_desc">Exit Admin Portal</string>
+    <string name="system_admin_subtitle">System Administration &amp; Inventory</string>
+    <string name="btn_manage_products">Manage Products &amp; Inventory</string>
+    <string name="btn_view_orders">View Customer Orders &amp; Payments</string>
+    <string name="btn_exit_admin_login">Exit to Customer Login</string>
+    <!-- M-Pesa Payment Activity Strings -->
+    <string name="mpesa_target_icon_desc">M-Pesa Icon</string>
+    <string name="mpesa_initial_prompt">Payment request initiated.\nCheck your phone for the M-Pesa prompt.</string>
+    <string name="mpesa_placeholder_details">Amount: KES 0.00\nPhone: 254712345678</string>
+    <string name="btn_check_payment_status">Check Payment Status</string>
+    <string name="btn_simulate_callback">Simulate Successful Callback</string>
+    <string name="mpesa_success_message">Payment confirmed successfully! 🎉</string>
+
+    <string name="toast_payment_confirmed">Payment confirmed successfully.</string>
+    <string name="toast_payment_pending">Payment status is pending. Please check again shortly.</string>
+    <string name="toast_callback_simulated">Payment confirmed via M-Pesa callback simulation</string>
+    <string name="btn_view_order_receipt">View Order Receipt</string>
+    <!-- Shopping Cart Strings -->
+    <string name="shopping_cart_title">Shopping Cart</string>
+    <string name="clear_cart">Clear</string>
+    <string name="hint_promo_code">Promo Code (e.g. MUNCHLY10)</string>
+    <string name="apply_promo">Apply</string>
+    <string name="subtotal_label">Subtotal</string>
+    <string name="delivery_fee_label">Delivery Fee</string>
+    <string name="total_amount_label">Total Amount</string>
+    <string name="default_zero_amount">KES 0.00</string>
+    <string name="default_delivery_amount">KES 150.00</string>
+    <string name="btn_proceed_checkout">Proceed to Checkout</string>
+</resources>

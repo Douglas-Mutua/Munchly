@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_light"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back"
+                    app:tint="#111111"
+                    android:contentDescription="@string/back" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/shopping_cart_title"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#222222" />
+
+                <TextView
+                    android:id="@+id/btnClearCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear_cart"
+                    android:textColor="#FF3B30"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Cart Items Container -->
+            <LinearLayout
+                android:id="@+id/cartItemsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Spacer to push summary & checkout button lower down -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:minHeight="40dp" />
+
+            <!-- Summary & Checkout Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F9F9F9"
+                android:padding="20dp"
+                android:layout_marginTop="8dp">
+
+                <!-- Promo Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <EditText
+                        android:id="@+id/etPromoCode"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rounded_light"
+                        android:hint="@string/hint_promo_code"
+                        android:autofillHints="postalCode"
+                        android:inputType="text"
+                        android:paddingHorizontal="16dp"
+                        android:textSize="13sp"
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:id="@+id/btnApplyPromo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/apply_promo"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="#FF6B00"
+                        app:cornerRadius="24dp"
+                        android:paddingHorizontal="16dp" />
+                </LinearLayout>
+
+                <!-- Bill Breakdown -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/subtotal_label"
+                        android:textColor="#666666"
+                        android:textSize="14sp"/>
+                    <TextView
+                        android:id="@+id/tvSubtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_zero_amount"
+                        android:textSize="14sp"
+                        android:textColor="#222222"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery_fee_label"
+                        android:textColor="#666666"
+                        android:textSize="14sp"/>
+                    <TextView
+                        android:id="@+id/tvDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_delivery_amount"
+                        android:textSize="14sp"
+                        android:textColor="#222222"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="24dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_amount_label"
+                        android:textColor="#222222"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvCartTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_zero_amount"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF6B00"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnProceedCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="@string/btn_proceed_checkout"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#FF6B00"
+                    app:cornerRadius="26dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
